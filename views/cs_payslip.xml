@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record model="ir.ui.view" id="cs_payslip_form">
+		<field name="name">cs payslip form view</field>
+		<field name="model">cs.payslip</field>
+		<field name="arch" type="xml">
+		<form string="Cs Payslip" version="7.0">
+ 			<sheet>
+ 			<!-- <div class="oe_right oe_button_box" name="import_buttons">
+ 				<button class="oe_inline oe_stat_button" name="%(action_psimport_wiz)d"
+                                string="Import" type="action"
+                                icon="fa-bars" />
+ 			</div> -->
+ 			<h1>
+ 			<label string="Payslip Ref" />
+ 			<field name="name" />
+ 			</h1>
+			<group string="General" col="4" colspan="2">
+					<field name="month" />
+					<field name="year" />
+					<field name="emp_id" />
+					<field name="employee_id" />
+					<field name="department_id" />
+					<field name="designation" />
+					<field name="bank_name" />
+					<field name="account_no" />
+					<field name="pan_no" />
+				</group>
+				<group>
+				 <group string="Earnigs">
+					<field name="regular_earnings" />
+					<field name="overtime_allowance" />
+					<field name="outstation_allowance" />
+					<field name="other_allowance" />
+					<field name="total_earnings" />
+				</group>
+				<group string="Deductions">
+					<field name="tds" />
+					<field name="esi" />
+					<field name="professional_tax" />
+					<field name="kscea" />
+					<field name="lop" />
+					<field name="pf" />
+					<field name="other_deductions" />
+					<field name="total_deductions" />
+				</group>
+				
+				<field name="net_salary" />
+					
+
+			</group>
+			</sheet>
+		</form>
+		</field>
+		</record>
+
+		<record model="ir.ui.view" id="cs_payslip_tree">
+		<field name="name">cs payslip tree view</field>
+		<field name="model">cs.payslip</field>
+		<field name="arch" type="xml">
+			<tree string="Cs Payslip">
+					<field name="name" />
+					<field name="emp_id" />
+					<field name="employee_id" />
+					<field name="department_id" />
+					<field name="designation" />
+					<field name="bank_name" />
+					<field name="account_no" />
+					<field name="pan_no" />
+					<field name="regular_earnings" />
+					<field name="overtime_allowance" />
+					<field name="outstation_allowance" />
+					<field name="other_allowance" />
+					<field name="total_earnings" />
+					<field name="tds" />
+					<field name="esi" />
+					<field name="professional_tax" />
+					<field name="kscea" />
+					<field name="lop" />
+					<field name="pf" />
+					<field name="other_deductions" />
+					<field name="net_salary" />
+					
+			</tree>
+		</field>
+		</record>
+
+		<record model="ir.ui.view" id="cs_payslip_search">
+		<field name="name">cs payslip search view</field>
+		<field name="model">cs.payslip</field>
+		<field name="arch" type="xml">
+			<search>
+					<field name="name" />
+					<field name="emp_id" />
+					<field name="employee_id" />
+					<field name="department_id" />
+					<field name="designation" />
+					<field name="bank_name" />
+					<field name="account_no" />
+					<field name="pan_no" />
+					<field name="regular_earnings" />
+					<field name="overtime_allowance" />
+					<field name="outstation_allowance" />
+					<field name="other_allowance" />
+					<field name="total_earnings" />
+					<field name="tds" />
+					<field name="esi" />
+					<field name="professional_tax" />
+					<field name="kscea" />
+					<field name="lop" />
+					<field name="pf" />
+					<field name="other_deductions" />
+					<field name="net_salary" />
+				
+			</search>
+		</field>
+		</record>
+
+		<record model="ir.ui.view" id="cs_payslip_graph">
+		<field name="name">cs payslip graph view</field>
+		<field name="model">cs.payslip</field>
+		<field name="arch" type="xml">
+			<graph>
+					<field name="name" />
+					<field name="emp_id" />
+					<field name="employee_id" />
+					<field name="department_id" />
+					<field name="designation" />
+					<field name="bank_name" />
+					<field name="account_no" />
+					<field name="pan_no" />
+					<field name="regular_earnings" />
+					<field name="overtime_allowance" />
+					<field name="outstation_allowance" />
+					<field name="other_allowance" />
+					<field name="total_earnings" />
+					<field name="tds" />
+					<field name="esi" />
+					<field name="professional_tax" />
+					<field name="kscea" />
+					<field name="lop" />
+					<field name="pf" />
+					<field name="other_deductions" />
+					<field name="net_salary" />
+				
+			</graph>
+		</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_cs_payslip">
+		<field name="name">Pay Slips</field>
+		<field name="res_model">cs.payslip</field>
+		<field name="view_mode">tree,form,graph</field>
+		</record>
+
+		<menuitem name="Pay Slips" 
+	  		id="menu_cs_payslip" 
+	  		parent="payslip_menu_general"
+            action="action_cs_payslip" />
+ 
+	</data>
+</openerp>

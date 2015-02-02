@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record model="ir.ui.view" id="psimport_wiz">
+		<field name="name">psimport wiz wizard</field>
+		<field name="model">psimport.wiz</field>
+		<field name="arch" type="xml">
+		<form string="Psimport Wiz" version="7.0">
+			<group>
+					<field name="month" />
+					<field name="year" />
+					<field name="file_csv" />
+					
+
+			</group>
+			<footer>
+				<button name="do_import_csv" string="Import Data" type="object" class="oe_highlight"/>
+   				or
+ 				<button string="Cancel" class="oe_link" special="cancel"/>
+			</footer>
+		</form>
+		</field>
+		</record>
+
+		<record id="action_psimport_wiz" model="ir.actions.act_window">
+		<field name="name">Payslip Wizard</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">psimport.wiz</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="psimport_wiz"/>
+		<field name="target">new</field>
+		</record>
+
+		<menuitem name="Payslip Import Wizard" 
+	  		id="menu_psimport_wiz" 
+	  		parent="payslip_menu_general"
+            action="action_psimport_wiz" />
+
+
+	</data>
+</openerp>

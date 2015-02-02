@@ -1,0 +1,8 @@
+<openerp>
+    <data>
+
+		<menuitem name="Payslip" id="payslip_menu_root" />
+		<menuitem name="Payslip Menu" id="payslip_menu_general" parent="payslip_menu_root" />
+
+    </data>
+</openerp>

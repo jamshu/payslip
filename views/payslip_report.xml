@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report 
+            string="Print Payslip" 
+            id="action_report_cspayslip" 
+            model="cs.payslip" 
+            report_type="qweb-pdf"
+            name="payslip.report_cspayslip" 
+            file="payslip.report_cspayslip" 
+        />
+
+      
+    </data>
+</openerp>

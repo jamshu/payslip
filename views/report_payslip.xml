@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="report_cspayslip">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="o">
+           
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <div class="row">
+                    	<!-- <div class="col-xs-2" >
+                            <img class="image" t-att-src="'data:image/png;base64,%s' % res_company.logo" style="border:auto;width:50px;height:50px"/>
+                        </div> -->
+                        <div class="col-xs-10 col-sm-10 text-left" ><h4>ConSyst Technologies (India) Private Limited</h4></div>
+                    </div>
+                    <div class="row">
+                    
+                    <div class="col-xs-10 col-sm-10 text-left" >Aluva,Eranakulam,Kerala,India.683 101</div>
+                    </div>
+                     <div class="row">
+                    
+                    <div class="col-xs-10 col-sm-10 text-left" >Tel +(91)-484-4049448,Fax. +(91)-484-4049448</div>
+                    </div>
+                  
+                    <div class="row">
+                    	
+								<div class="col-xs-12 mt32 text-center">
+								   Pay Slip for the Month of: <span t-field="o.month" />/<span t-field="o.year" />
+								
+								  
+								    <div class="row">
+								      <div class="col-xs-2 col-sm-2 text-left" >
+								        Employee Id       </div>
+								      <div class="col-xs-4 col-sm-4 text-left">
+								       : <span t-field="o.emp_id" />
+								      </div>
+								      <div class="col-xs-2 col-sm-2 text-left">
+								        Name
+								      </div>
+								      <div class="col-xs-4 col-sm-4 text-left">
+								       : <span t-field="o.employee_id" />
+								      </div>
+								     </div>     
+								      <div class="row">
+								       <div class="col-xs-2 col-sm-2 text-left" >
+								        Department       </div>
+								      <div class="col-xs-4 col-sm-4 text-left">
+								       : <span t-field="o.department_id" />
+								     </div>
+								      <div class="col-xs-2 col-sm-2 text-left">
+								        Designation
+								      </div>
+								      <div class="col-xs-4 col-sm-4 text-left">
+								       : <span t-field="o.designation" />
+								      </div>   </div>  <div class="row">
+								      <div class="col-xs-2 col-sm-2 text-left">Bank Name</div>
+								      <div class="col-xs-4 col-sm-4 text-left">: <span t-field="o.bank_name" /></div>
+								      
+								      <div class="col-xs-2 col-sm-2 text-left">Bank A/C No</div>
+								      <div class="col-xs-4 col-sm-4 text-left">: <span t-field="o.account_no" /></div>
+								      
+								         </div>
+								         <div class="row"> 
+								         <div class="col-xs-2 col-sm-2 text-left">PAN No</div>
+								      <div class="col-xs-4 col-sm-4 text-left">: <span t-field="o.pan_no" /></div>
+      
+    </div>
+  </div>
+				
+								
+								  <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left table-bordered label-default"><strong>Earnings</strong></div>
+								  		<div class="col-xs-2 col-sm-2 text-right table-bordered label-default"><strong>Amount</strong></div>
+								  		<div class="col-xs-4 col-sm-4 text-left table-bordered label-default"><strong>Deductions</strong></div>
+								  		<div class="col-xs-2 col-sm-2 text-right table-bordered label-default"><strong>Amount</strong></div>
+								  </div>
+								  <div class="watermark" style="position:absolute;opacity:0.25;font-size:3em;width:100%;text-align:center;z-index:1000;-webkit-transform: rotate(325deg);">Employee Copy</div>
+								  <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" >Regular Earnings</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.regular_earnings"/></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >TDS</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.tds"/></div>
+								  </div>
+								  <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" >Overtime Allowance</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.overtime_allowance"/></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >ESI</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.esi"/></div>
+								  </div>
+								   <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" >Outstation Allowance</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.outstation_allowance"/></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >Professional Tax</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.professional_tax"/></div>
+								  </div>
+								   <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" >Other Allowance</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.other_allowance"/></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >KSCEA</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.kscea"/></div>
+								  </div>
+								   <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" ></div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >LOP</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.lop"/></div>
+								  </div>
+								  <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" ></div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >PF</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.pf"/></div>
+								  </div>
+								  <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" ></div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >Other Deductions</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.other_deductions"/></div>
+								  </div>
+								  <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left table-bordered label-default"><strong>Total Earnings</strong></div>
+								  		<div class="col-xs-2 col-sm-2 text-right table-bordered label-default"><strong><span t-field="o.total_earnings"/></strong></div>
+								  		<div class="col-xs-4 col-sm-4 text-left table-bordered label-default"><strong>Total Deductions</strong></div>
+								  		<div class="col-xs-2 col-sm-2 text-right table-bordered label-default"><strong><span t-field="o.total_deductions"/></strong></div>
+								  </div>
+								  
+								 <br/>
+								   
+								  <div class="row">
+								  		
+								      <div class="col-xs-6 col-sm-6 text-left label-success" style="font-size:18px;" ><strong>Net Salary</strong></div>
+								      <div class="col-xs-6 col-sm-6 text-right label-success" style="font-size:18px;"><strong>INR.<span t-field="o.net_salary"/></strong></div>
+								  </div>
+								 
+								 <div class="row">
+								  	<div class="col-xs-4 col-sm-4 text-left" ><hr/></div>
+								  	<div class="col-xs-4 col-sm-4 text-left" ></div>
+								  	<div class="col-xs-4 col-sm-4 text-left" ><hr/></div>
+								  </div>
+								 
+								  <div class="row">
+								  	<div class="col-xs-6 col-sm-6 text-left" >Authorized Signatory</div>
+								  	<div class="col-xs-6 col-sm-6 text-right" >Employee's Signature</div>
+								  </div>
+								
+                    
+                     </div>
+                     <br/>
+                    
+<!--           #############################  The second part copy ###########################################33           -->
+                   
+                   
+                  <div class="row">
+                    	
+								<div class="col-xs-12 mt32 text-center">
+								   Pay Slip for the Month of: <span t-field="o.month" />/<span t-field="o.year" />
+								
+								  
+								    <div class="row">
+								      <div class="col-xs-2 col-sm-2 text-left" >
+								        Employee Id       </div>
+								      <div class="col-xs-4 col-sm-4 text-left">
+								       : <span t-field="o.emp_id" />
+								      </div>
+								      <div class="col-xs-2 col-sm-2 text-left">
+								        Name
+								      </div>
+								      <div class="col-xs-4 col-sm-4 text-left">
+								       : <span t-field="o.employee_id" />
+								      </div>
+								     </div>     
+								      <div class="row">
+								       <div class="col-xs-2 col-sm-2 text-left" >
+								        Department       </div>
+								      <div class="col-xs-4 col-sm-4 text-left">
+								       : <span t-field="o.department_id" />
+								      </div>
+								      <div class="col-xs-2 col-sm-2 text-left">
+								        Designation
+								      </div>
+								      <div class="col-xs-4 col-sm-4 text-left">
+								       : <span t-field="o.designation" />
+								      </div>   </div>  <div class="row">
+								      <div class="col-xs-2 col-sm-2 text-left">Bank Name</div>
+								      <div class="col-xs-4 col-sm-4 text-left">: <span t-field="o.bank_name" /></div>
+								      
+								      <div class="col-xs-2 col-sm-2 text-left">Bank A/C No</div>
+								      <div class="col-xs-4 col-sm-4 text-left">: <span t-field="o.account_no" /></div>
+								      
+								         </div>
+								         <div class="row"> 
+								         <div class="col-xs-2 col-sm-2 text-left">PAN No</div>
+								      <div class="col-xs-4 col-sm-4 text-left">: <span t-field="o.pan_no" /></div>
+      
+    </div>
+  </div>
+				
+								
+								  <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left table-bordered label-default"><strong>Earnings</strong></div>
+								  		<div class="col-xs-2 col-sm-2 text-right table-bordered label-default"><strong>Amount</strong></div>
+								  		<div class="col-xs-4 col-sm-4 text-left table-bordered label-default"><strong>Deductions</strong></div>
+								  		<div class="col-xs-2 col-sm-2 text-right table-bordered label-default"><strong>Amount</strong></div>
+								  </div>
+								  <div class="watermark" style="position:absolute;opacity:0.25;font-size:3em;width:100%;text-align:center;z-index:1000;-webkit-transform: rotate(325deg);">Employer Copy</div>
+								  <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" >Regular Earnings</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.regular_earnings"/></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >TDS</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.tds"/></div>
+								  </div>
+								  <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" >Overtime Allowance</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.overtime_allowance"/></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >ESI</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.esi"/></div>
+								  </div>
+								   <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" >Outstation Allowance</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.outstation_allowance"/></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >Professional Tax</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.professional_tax"/></div>
+								  </div>
+								   <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" >Other Allowance</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.other_allowance"/></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >KSCEA</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.kscea"/></div>
+								  </div>
+								   <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" ></div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >LOP</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.lop"/></div>
+								  </div>
+								  <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" ></div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >PF</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.pf"/></div>
+								  </div>
+								  <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left" ></div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ></div>
+								  		<div class="col-xs-4 col-sm-4 text-left" >Other Deductions</div>
+								  		<div class="col-xs-2 col-sm-2 text-right" ><span t-field="o.other_deductions"/></div>
+								  </div>
+								   <div class="row">
+								  		<div class="col-xs-4 col-sm-4 text-left table-bordered label-default"><strong>Total Earnings</strong></div>
+								  		<div class="col-xs-2 col-sm-2 text-right table-bordered label-default"><strong><span t-field="o.total_earnings"/></strong></div>
+								  		<div class="col-xs-4 col-sm-4 text-left table-bordered label-default"><strong>Total Deductions</strong></div>
+								  		<div class="col-xs-2 col-sm-2 text-right table-bordered label-default"><strong><span t-field="o.total_deductions"/></strong></div>
+								  </div>
+								  
+								 
+								   <br/>
+								  <div class="row">
+								  		
+								      <div class="col-xs-6 col-sm-6 text-left label-info" style="font-size:18px;" ><strong>Net Salary</strong></div>
+								      <div class="col-xs-6 col-sm-6 text-right label-info" style="font-size:18px;"><strong>INR.<span t-field="o.net_salary"/></strong></div>
+								  </div>
+								 
+								 <div class="row">
+								  	<div class="col-xs-4 col-sm-4 text-left" ><hr/></div>
+								  	<div class="col-xs-4 col-sm-4 text-left" ></div>
+								  	<div class="col-xs-4 col-sm-4 text-left" ><hr/></div>
+								  </div>
+								 
+								  <div class="row">
+								  	<div class="col-xs-6 col-sm-6 text-left" >Authorized Signatory</div>
+								  	<div class="col-xs-6 col-sm-6 text-right" >Employee's Signature</div>
+								  </div>
+							
+                    
+                     </div>
+                     
+                     
+                    <div class="oe_structure"/>
+                </div>
+                
+            </t>
+     
+    </t>
+</template>
+</data>
+</openerp>
