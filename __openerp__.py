@@ -14,6 +14,7 @@
 			'views/psimport_wiz.xml',
 			'views/report_payslip.xml',
 			'views/payslip_report.xml',
+			'data/payslip_seq.xml',
 			],
 	'demo': [],
 	'test': [],

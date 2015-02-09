@@ -5,7 +5,7 @@ class cs_payslip(osv.osv):
 	_description = 'Cs Payslip'
 	_inherit = ['mail.thread']
 	_columns = {
-		'name':fields.char('Name'),
+		'name':fields.char('Name',readonly=True),
 		'emp_id':fields.char('Employee ID'),
 		'employee_id':fields.char('Employee Name'),
 		'department_id':fields.char('Department'),
@@ -32,4 +32,13 @@ class cs_payslip(osv.osv):
                                   ('07','July'), ('08','August'), ('09','September'), ('10','October'), ('11','November'), ('12','December')],'Month'),
 		'year': fields.selection([(num, str(num)) for num in range(2000, (datetime.now().year)+1 )], 'Year'),
 			}
+	_defaults = {
+				 'name': lambda obj, cr, uid, context: '/',
+				}
+	def create(self, cr, uid, vals, context=None):
+		if context is None:
+			context = {}
+		if vals.get('name', '/') == '/':
+			vals['name'] = self.pool.get('ir.sequence').get(cr, uid, 'cs.payslip') or '/'
+		return super(cs_payslip,self).create(cr, uid, vals, context=context)
 cs_payslip()

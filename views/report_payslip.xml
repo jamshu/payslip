@@ -8,11 +8,14 @@
                 <div class="page">
                     <div class="oe_structure"/>
                     <div class="row">
-                    	<!-- <div class="col-xs-2" >
-                            <img class="image" t-att-src="'data:image/png;base64,%s' % res_company.logo" style="border:auto;width:50px;height:50px"/>
-                        </div> -->
+                    	
                         <div class="col-xs-10 col-sm-10 text-left" ><h4>ConSyst Technologies (India) Private Limited</h4></div>
+                         <div class="col-xs-2 text-right" >
+                            <img class="image" t-att-src="'data:image/png;base64,%s' % res_company.logo" style="width:60px;height:30px"/>
+                        </div> 
+                       
                     </div>
+                    
                     <div class="row">
                     
                     <div class="col-xs-10 col-sm-10 text-left" >Aluva,Eranakulam,Kerala,India.683 101</div>
