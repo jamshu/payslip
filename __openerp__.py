@@ -10,8 +10,9 @@
 	'website': 'https://www.intconsyst.com',
 	'depends': ['base','mail','account'],
 	'data': ['views/menu.xml',
-			'views/cs_payslip.xml',
+			
 			'views/psimport_wiz.xml',
+			'views/cs_payslip.xml',
 			'views/report_payslip.xml',
 			'views/payslip_report.xml',
 			'data/payslip_seq.xml',

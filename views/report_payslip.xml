@@ -10,9 +10,9 @@
                     <div class="row">
                     	
                         <div class="col-xs-10 col-sm-10 text-left" ><h4>ConSyst Technologies (India) Private Limited</h4></div>
-                         <div class="col-xs-2 text-right" >
+                        <!--  <div class="col-xs-2 text-right" >
                             <img class="image" t-att-src="'data:image/png;base64,%s' % res_company.logo" style="width:60px;height:30px"/>
-                        </div> 
+                        </div>  -->
                        
                     </div>
                     
